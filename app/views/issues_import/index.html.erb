@@ -1,6 +1,6 @@
 <h1>Issues file upload</h1>
 <%= form_for import_issues_path, :url => "/import_issues" do |f| %>
-  <%= f.collection_select(:repository_id, Repository.all, :id, :identifier) %>
+  <%= f.collection_select(:project_id, Project.visible, :id, :name) %>
   <%= f.file_field :issues_json %></p>
   <%= f.submit "Upload" %>
 <% end %>
