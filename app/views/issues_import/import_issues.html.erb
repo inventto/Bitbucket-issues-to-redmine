@@ -1,3 +1,8 @@
 <h1>Issues file upload</h1>
-<%= params["/import_issues"][:project] %>
-<%= params["/import_issues"][:issues_json] %>
+<% @data_hash["issues"].each do |issue| %>
+  <%= issue["title"] %>
+  <br>
+  <%= issue["content"]%>
+  <br>
+  <br>
+<% end %>
